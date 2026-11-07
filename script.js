@@ -1,6 +1,10 @@
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('.site-nav');
 
+document.querySelectorAll('.skill-logo, .social-logo').forEach((logo) => {
+  logo.addEventListener('error', () => logo.remove());
+});
+
 menuButton.addEventListener('click', () => {
   const opening = menuButton.getAttribute('aria-expanded') !== 'true';
   menuButton.setAttribute('aria-expanded', String(opening));
@@ -13,6 +17,14 @@ navigation.addEventListener('click', (event) => {
   menuButton.setAttribute('aria-expanded', 'false');
   menuButton.setAttribute('aria-label', 'Open navigation');
   navigation.classList.remove('is-open');
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key !== 'Escape' || menuButton.getAttribute('aria-expanded') !== 'true') return;
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.setAttribute('aria-label', 'Open navigation');
+  navigation.classList.remove('is-open');
+  menuButton.focus();
 });
 
 const navLinks = [...navigation.querySelectorAll('a')];
@@ -30,6 +42,23 @@ if ('IntersectionObserver' in window) {
     });
   }, { rootMargin: '-20% 0px -66% 0px', threshold: [0, 0.12, 0.3] });
   navSections.forEach((section) => navObserver.observe(section));
+}
+
+const workIndexLinks = [...document.querySelectorAll('.work-index a')];
+const workCategories = workIndexLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
+if ('IntersectionObserver' in window && workIndexLinks.length) {
+  const workObserver = new IntersectionObserver((entries) => {
+    const current = entries.filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!current) return;
+    workIndexLinks.forEach((link) => {
+      const active = link.hash === `#${current.target.id}`;
+      link.classList.toggle('is-active', active);
+      if (active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }, { rootMargin: '-24% 0px -62% 0px', threshold: [0, 0.1, 0.25] });
+  workCategories.forEach((category) => workObserver.observe(category));
 }
 
 const dialog = document.querySelector('.lightbox');
@@ -87,4 +116,6 @@ dialog.addEventListener('touchend', (event) => {
 }, { passive: true });
 dialog.addEventListener('touchcancel', () => { touchStart = null; }, { passive: true });
 
-document.querySelector('#year').textContent = new Date().getFullYear();
+const year = new Date().getFullYear();
+document.querySelector('#year').textContent = year;
+document.querySelector('#current-year').textContent = year;

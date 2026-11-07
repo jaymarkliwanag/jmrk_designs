@@ -16,6 +16,20 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-spark" viewBox="0 0 24 24"><path d="M12 2.8 14.3 9.7 21.2 12l-6.9 2.3L12 21.2l-2.3-6.9L2.8 12l6.9-2.3L12 2.8Z"/><path d="m19 2 .7 2.3L22 5l-2.3.7L19 8l-.7-2.3L16 5l2.3-.7L19 2Z"/></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8.5 5-7 7 7 7M15.5 5l7 7-7 7M14 3l-4 18"/></symbol>
+    <symbol id="icon-picture" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v17H6.5A2.5 2.5 0 0 0 4 21.5v-17Z"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20M8 6h8M8 9h8"/></symbol>
+    <symbol id="icon-print" viewBox="0 0 24 24"><path d="M6 8V3h12v5M6 17H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v7H6z"/><path d="M18 11h.01"/></symbol>
+    <symbol id="icon-cap" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c3.5 3 8.5 3 12 0v-5M22 9v6"/></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+    <symbol id="icon-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m5 5 14 14M19 5 5 19"/></symbol>
+    <symbol id="icon-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="icon-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  </svg>
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="JMRK Designs - back to top">JMRK</a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
@@ -26,24 +40,27 @@
 
   <main id="top">
     <section class="hero section-wrap" aria-labelledby="hero-title">
-      <div class="hero-meta"><span>Independent creative archive</span><span>Philippines <i> / </i> 2026</span></div>
+      <div class="hero-meta"><span><svg class="icon"><use href="#icon-spark"/></svg> Independent creative archive</span><span>Philippines <i> / </i> <span id="current-year"></span></span></div>
       <div class="hero-mark" aria-hidden="true">JMRK</div>
       <div class="hero-bottom">
         <div class="hero-name"><span class="mono">01 / INTRODUCTION</span><h1 id="hero-title">Jay Mark</h1></div>
-        <div class="hero-summary"><p class="roles">IT student <i>/</i> Web developer <i>/</i> Graphic designer</p><p>An IT student working across web development and visual design.</p><a href="#works" class="jump-link">Browse the archive</a></div>
+        <div class="hero-summary"><p class="roles">IT student <i>/</i> Web developer <i>/</i> Graphic designer</p><p>An IT student working across web development and visual design.</p><a href="#works" class="jump-link">Browse the archive <svg class="icon"><use href="#icon-arrow"/></svg></a></div>
       </div>
       <div class="hero-edge" aria-hidden="true"><span>Personal work, in progress</span><span>Scroll to explore</span></div>
     </section>
 
     <section class="section-wrap section-block about-section" id="about">
-      <div class="section-title"><span class="mono">01</span><h2>About</h2><span class="section-line"></span></div>
+      <div class="section-title"><span class="mono">01</span><svg class="section-icon"><use href="#icon-spark"/></svg><h2>About</h2><span class="section-line"></span></div>
       <div class="about-copy"><p class="about-lead">I'm studying BS Information Technology at PUP Sto. Tomas Campus, with web development as my primary technical interest.</p><div class="about-aside"><p>I also work on graphic design, UI/UX, illustration, and multimedia. I like projects that combine visual creativity with technology, from academic work to personal experiments.</p><span class="location-tag"><b></b> Based in the Philippines</span></div></div>
     </section>
 
     <section class="section-wrap works-section section-block" id="works">
-      <div class="section-title"><span class="mono">02</span><h2>Works</h2><span class="section-line"></span><span class="title-note">A selection from the archive</span></div>
+      <div class="section-title"><span class="mono">02</span><svg class="section-icon"><use href="#icon-picture"/></svg><h2>Works</h2><span class="section-line"></span><span class="title-note">A selection from the archive</span></div>
+      <nav class="work-index" aria-label="Jump to a work category">
+        <a href="#dev-work"><svg class="icon"><use href="#icon-code"/></svg> Digital</a><a href="#identity-work"><svg class="icon"><use href="#icon-spark"/></svg> Identity</a><a href="#book-work"><svg class="icon"><use href="#icon-book"/></svg> Covers</a><a href="#publication-work"><svg class="icon"><use href="#icon-print"/></svg> Publication</a><a href="#poster-work"><svg class="icon"><use href="#icon-picture"/></svg> Posters</a><a href="#photo-work"><svg class="icon"><use href="#icon-picture"/></svg> Photo work</a>
+      </nav>
 
-      <section class="category dev-category" aria-labelledby="dev-title">
+      <section class="category dev-category" id="dev-work" aria-labelledby="dev-title">
         <div class="category-title"><div><span class="mono">01 - WEB / GAME DEVELOPMENT</span><h3 id="dev-title">Interfaces &amp; experiments</h3></div><span class="item-count">03 projects</span></div>
         <div class="dev-projects">
           <figure class="dev-project dev-main"><a class="image-open dev-screen" href="assets/development/arxn-clothing.png" data-caption="ARXN Clothing / Web design"><img src="assets/development/arxn-clothing.png" alt="ARXN Clothing website design screenshot" loading="lazy"></a><figcaption><span><b>ARXN Clothing</b><i>Web design</i></span><small>01</small></figcaption></figure>
@@ -52,7 +69,7 @@
         </div>
       </section>
 
-      <section class="category identity-category" aria-labelledby="identity-title">
+      <section class="category identity-category" id="identity-work" aria-labelledby="identity-title">
         <div class="category-title"><div><span class="mono">02 - LOGO / VISUAL IDENTITY</span><h3 id="identity-title">ARXN</h3></div><span class="item-count">One identity / three pages</span></div>
         <div class="identity-note"><p>Visual identity presentation</p><span class="mono">01 -> 03 / READ TOP TO BOTTOM</span></div>
         <div class="identity-stack">
@@ -62,7 +79,7 @@
         </div>
       </section>
 
-      <section class="category book-category" aria-labelledby="book-title">
+      <section class="category book-category" id="book-work" aria-labelledby="book-title">
         <div class="category-title"><div><span class="mono">03 - COVER ART</span><h3 id="book-title">Book covers</h3></div><span class="item-count">06 covers</span></div>
         <div class="book-grid">
           <figure><a class="image-open book-cover" href="assets/book-covers/keeper-of-pearls-and-sorrow.png" data-caption="Keeper of Pearls and Sorrow"><img src="assets/book-covers/keeper-of-pearls-and-sorrow.png" alt="Keeper of Pearls and Sorrow cover" loading="lazy"></a><figcaption>Keeper of Pearls and Sorrow</figcaption></figure>
@@ -74,7 +91,7 @@
         </div>
       </section>
 
-      <section class="category publication-category" aria-labelledby="publication-title">
+      <section class="category publication-category" id="publication-work" aria-labelledby="publication-title">
         <div class="category-title"><div><span class="mono">04 - PUBLICATION</span><h3 id="publication-title">Print &amp; promotion</h3></div><span class="item-count">05 pieces</span></div>
         <div class="publication-grid">
           <figure class="pub-feature"><a class="image-open pub-image" href="assets/publication/shs-idol.jpeg" data-caption="SHS Idol - Publication design"><img src="assets/publication/shs-idol.jpeg" alt="SHS Idol publication poster" loading="lazy"></a><figcaption>SHS Idol</figcaption></figure>
@@ -85,7 +102,7 @@
         </div>
       </section>
 
-      <section class="category poster-category" aria-labelledby="poster-title">
+      <section class="category poster-category" id="poster-work" aria-labelledby="poster-title">
         <div class="category-title"><div><span class="mono">05 - POSTERS / PERSONAL WORKS</span><h3 id="poster-title">Posters and personal works</h3></div><span class="item-count">05 pieces</span></div>
         <div class="poster-grid">
           <figure><a class="image-open poster-image" href="assets/posters/astronomy.png" data-caption="Astronomy / Poster"><img src="assets/posters/astronomy.png" alt="Astronomy poster in pink and orange tones" loading="lazy"></a><figcaption>Astronomy</figcaption></figure>
@@ -96,7 +113,7 @@
         </div>
       </section>
 
-      <section class="category photo-category" aria-labelledby="photo-title">
+      <section class="category photo-category" id="photo-work" aria-labelledby="photo-title">
         <div class="category-title"><div><span class="mono">06 - PHOTO MANIPULATION</span><h3 id="photo-title">Digital portraits</h3></div><span class="item-count">02 pieces</span></div>
         <div class="photo-grid">
           <figure><a class="image-open photo-image" href="assets/photo-manipulation/infernuz-jay.jpg" data-caption="Infernuz Jay / Photo manipulation"><img src="assets/photo-manipulation/infernuz-jay.jpg" alt="Infernuz Jay photo manipulation in a dark red setting" loading="lazy"></a><figcaption><span>Infernuz Jay</span><i>Photo manipulation</i></figcaption></figure>
@@ -106,27 +123,27 @@
     </section>
 
     <section class="section-wrap section-block skills-section" id="skills">
-      <div class="section-title"><span class="mono">03</span><h2>Skills</h2><span class="section-line"></span></div>
+      <div class="section-title"><span class="mono">03</span><svg class="section-icon"><use href="#icon-code"/></svg><h2>Skills</h2><span class="section-line"></span></div>
       <div class="skill-list">
-        <article><span class="mono">01</span><h3>Frontend development</h3><p>HTML <i> / </i> CSS <i> / </i> JavaScript</p></article>
-        <article><span class="mono">02</span><h3>Backend &amp; programming</h3><p>PHP <i> / </i> Python <i> / </i> MySQL <i> / </i> C++</p></article>
-        <article><span class="mono">03</span><h3>UI/UX &amp; graphic design</h3><p>Figma <i> / </i> Adobe Photoshop <i> / </i> Adobe Illustrator <i> / </i> Adobe InDesign <i> / </i> Canva</p></article>
-        <article><span class="mono">04</span><h3>Illustration</h3><p>ibisPaint <i> / </i> Clip Studio Paint</p></article>
-        <article><span class="mono">05</span><h3>Video editing</h3><p>DaVinci Resolve <i> / </i> CapCut</p></article>
-        <article><span class="mono">06</span><h3>Development tools</h3><p>Git <i> / </i> GitHub <i> / </i> Visual Studio Code <i> / </i> XAMPP</p></article>
+        <article><span class="mono">01</span><h3>Frontend development</h3><div class="skill-tags"><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/html5" alt="" loading="lazy">HTML</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/css" alt="" loading="lazy">CSS</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/javascript" alt="" loading="lazy">JavaScript</span></div></article>
+        <article><span class="mono">02</span><h3>Backend &amp; programming</h3><div class="skill-tags"><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/php" alt="" loading="lazy">PHP</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/python" alt="" loading="lazy">Python</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/mysql" alt="" loading="lazy">MySQL</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/cplusplus" alt="" loading="lazy">C++</span></div></article>
+        <article><span class="mono">03</span><h3>UI/UX &amp; graphic design</h3><div class="skill-tags"><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/figma" alt="" loading="lazy">Figma</span><span class="skill-tag"><img class="skill-logo" src="https://api.iconify.design/logos/adobe-photoshop.svg" alt="" loading="lazy">Photoshop</span><span class="skill-tag"><img class="skill-logo" src="https://api.iconify.design/logos/adobe-illustrator.svg" alt="" loading="lazy">Illustrator</span><span class="skill-tag"><img class="skill-logo" src="https://api.iconify.design/logos/adobe-indesign.svg" alt="" loading="lazy">InDesign</span><span class="skill-tag"><img class="skill-logo" src="https://api.iconify.design/simple-icons/canva.svg" alt="" loading="lazy">Canva</span></div></article>
+        <article><span class="mono">04</span><h3>Illustration</h3><div class="skill-tags"><span class="skill-tag"><img class="skill-logo" src="https://upload.wikimedia.org/wikipedia/commons/8/80/IbisPaint_X_%28App_Icon%29.svg" alt="" loading="lazy">ibisPaint</span><span class="skill-tag"><img class="skill-logo skill-logo-csp" src="https://upload.wikimedia.org/wikipedia/commons/5/50/2026_csp_logo_RGB_1200.png" alt="" loading="lazy">Clip Studio Paint</span></div></article>
+        <article><span class="mono">05</span><h3>Video editing</h3><div class="skill-tags"><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/davinciresolve" alt="" loading="lazy">DaVinci Resolve</span><span class="skill-tag"><img class="skill-logo" src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Capcut-icon.svg" alt="" loading="lazy">CapCut</span></div></article>
+        <article><span class="mono">06</span><h3>Development tools</h3><div class="skill-tags"><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/git" alt="" loading="lazy">Git</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/github" alt="" loading="lazy">GitHub</span><span class="skill-tag"><img class="skill-logo" src="https://api.iconify.design/cib/visual-studio-code.svg" alt="" loading="lazy">Visual Studio Code</span><span class="skill-tag"><img class="skill-logo" src="https://cdn.simpleicons.org/xampp" alt="" loading="lazy">XAMPP</span></div></article>
       </div>
     </section>
 
     <section class="section-wrap section-block education-section" id="education">
-      <div class="section-title"><span class="mono">04</span><h2>Education</h2><span class="section-line"></span></div>
+      <div class="section-title"><span class="mono">04</span><svg class="section-icon"><use href="#icon-cap"/></svg><h2>Education</h2><span class="section-line"></span></div>
       <div class="education-list">
-        <article><span class="mono">2025 - PRESENT</span><div><h3>Polytechnic University of the Philippines</h3><p>Sto. Tomas Campus</p></div><p>Bachelor of Science in Information Technology</p></article>
-        <article><span class="mono">2023 - 2025</span><div><h3>Tanauan Institute Inc.</h3></div><p>TVL-ICT / Computer Systems Servicing</p></article>
+        <article><img class="school-logo" src="assets/logo/pup.png" alt="Polytechnic University of the Philippines seal" loading="lazy"><span class="mono">2025 - PRESENT</span><div><h3>Polytechnic University of the Philippines</h3><p>Sto. Tomas Campus</p></div><p>Bachelor of Science in Information Technology</p></article>
+        <article><img class="school-logo" src="assets/logo/ti.png" alt="Tanauan Institute seal" loading="lazy"><span class="mono">2023 - 2025</span><div><h3>Tanauan Institute Inc.</h3></div><p>TVL-ICT / Computer Systems Servicing</p></article>
       </div>
     </section>
 
     <section class="section-wrap section-block experience-section" id="experience">
-      <div class="section-title"><span class="mono">05</span><h2>Experience / Involvement</h2><span class="section-line"></span></div>
+      <div class="section-title"><span class="mono">05</span><svg class="section-icon"><use href="#icon-spark"/></svg><h2>Experience / Involvement</h2><span class="section-line"></span></div>
       <div class="experience-list">
         <p><span>01</span><b>Freelance Graphic Designer / Artist</b></p>
         <p><span>02</span><b>PUP Computer Society</b><i>Design Committee Member</i></p>
@@ -135,29 +152,29 @@
     </section>
 
     <section class="section-wrap contact-section section-block" id="contact">
-      <div class="section-title"><span class="mono">06</span><h2>Contact</h2><span class="section-line"></span></div>
+      <div class="section-title"><span class="mono">06</span><svg class="section-icon"><use href="#icon-mail"/></svg><h2>Contact</h2><span class="section-line"></span></div>
       <div class="contact-content">
         <p class="contact-intro">Email</p>
-        <a class="email-address" href="mailto:thisisjmrk@gmail.com">thisisjmrk@gmail.com</a>
-        <a class="facebook-link" href="https://www.facebook.com/liwanagjaymark/" target="_blank" rel="noopener noreferrer">
-          <span>Facebook</span>
-          <span>Jay Mark</span>
+        <a class="email-address" href="mailto:thisisjmrk@gmail.com">thisisjmrk@gmail.com <svg class="icon"><use href="#icon-arrow"/></svg></a>
+        <a class="facebook-link" href="https://www.facebook.com/liwanagjaymark/" target="_blank" rel="noopener noreferrer" aria-label="Facebook: Jay Mark">
+          <span class="social-brand"><img class="social-logo" src="https://cdn.simpleicons.org/facebook/0866FF" alt="" loading="lazy">Facebook</span>
+          <span class="social-handle">Jay Mark <svg class="icon"><use href="#icon-arrow"/></svg></span>
         </a>
-        <a class="facebook-link" href="https://www.instagram.com/jayyyliwanag/" target="_blank" rel="noopener noreferrer">
-          <span>Instagram</span>
-          <span>@jayyyliwanag</span>
+        <a class="facebook-link" href="https://www.instagram.com/jayyyliwanag/" target="_blank" rel="noopener noreferrer" aria-label="Instagram: jayyyliwanag">
+          <span class="social-brand"><img class="social-logo" src="https://cdn.simpleicons.org/instagram/E4405F" alt="" loading="lazy">Instagram</span>
+          <span class="social-handle">@jayyyliwanag <svg class="icon"><use href="#icon-arrow"/></svg></span>
         </a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer section-wrap"><a class="wordmark" href="#top">JMRK</a><span>Jay Mark / Philippines</span><a href="#top" class="back-top">Back to top </a><span>Copyright <span id="year"></span></span></footer>
+  <footer class="site-footer section-wrap"><a class="wordmark" href="#top">JMRK</a><span>Jay Mark / Philippines</span><a href="#top" class="back-top">Back to top <svg class="icon"><use href="#icon-up"/></svg></a><span>Copyright <span id="year"></span></span></footer>
 
   <dialog class="lightbox" aria-label="Artwork preview">
-    <button class="lightbox-close" type="button" aria-label="Close image preview">X</button>
-    <button class="lightbox-prev" type="button" aria-label="Previous image">Prev</button>
+    <button class="lightbox-close" type="button" aria-label="Close image preview"><svg class="icon"><use href="#icon-close"/></svg></button>
+    <button class="lightbox-prev" type="button" aria-label="Previous image"><svg class="icon"><use href="#icon-left"/></svg></button>
     <figure><img class="lightbox-image" alt=""><figcaption class="lightbox-caption"></figcaption></figure>
-    <button class="lightbox-next" type="button" aria-label="Next image">Next</button>
+    <button class="lightbox-next" type="button" aria-label="Next image"><svg class="icon"><use href="#icon-right"/></svg></button>
     <p class="lightbox-count" aria-live="polite"></p>
   </dialog>
 </body>
