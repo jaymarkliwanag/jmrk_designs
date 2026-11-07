@@ -83,9 +83,8 @@ figure, h1, h2, h3, h4, p { margin: 0; }
 .identity-note { display: flex; justify-content: space-between; gap: 10px; align-items: center; border-top: 1px solid var(--line); padding: 10px 1px; }
 .identity-note p { font-size: 10px; }
 .identity-note .mono { font-size: 8px; text-align: right; }
-.identity-stack { border: 1px solid var(--line); }
-.identity-page { display: block; border-bottom: 1px solid var(--line); cursor: zoom-in; }
-.identity-page:last-child { border-bottom: 0; }
+.identity-stack { display: block; }
+.identity-page { display: block; cursor: zoom-in; }
 .identity-page img { width: 100%; height: auto; }
 
 .book-category { padding-top: 62px; }
@@ -96,8 +95,7 @@ figure, h1, h2, h3, h4, p { margin: 0; }
 
 .publication-category { padding-top: 62px; }
 .publication-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 11px; align-items: start; }
-.pub-feature { grid-column: 1 / -1; }
-.pub-wide { grid-column: 1 / -1; }
+.pub-feature, .pub-related { grid-column: 1 / -1; }
 .pub-image { display: block; cursor: zoom-in; }
 .pub-image img { width: 100%; height: auto; }
 
@@ -156,6 +154,7 @@ figure, h1, h2, h3, h4, p { margin: 0; }
 .lightbox-close { top: 5px; right: 5px; font-size: 25px; }
 .lightbox-prev { top: 50%; left: 1px; transform: translateY(-50%); }
 .lightbox-next { top: 50%; right: 1px; transform: translateY(-50%); }
+.lightbox-prev, .lightbox-next { font-size: 11px; }
 .lightbox-count { position: absolute; bottom: 12px; left: 50%; color: #aaa; font-family: var(--mono); font-size: 9px; transform: translateX(-50%); }
 .lightbox button:hover { background: #333; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
@@ -195,8 +194,9 @@ figure, h1, h2, h3, h4, p { margin: 0; }
   .book-grid figure { max-width: 300px; }
   .book-grid figcaption, .publication-grid figcaption, .poster-grid figcaption { padding-top: 8px; font-size: 11px; }
   .publication-grid { grid-template-columns: 1.05fr 1fr 1fr 1fr; gap: 16px; }
-  .pub-feature { grid-column: auto; grid-row: span 2; }
-  .pub-wide { grid-column: 2 / span 3; }
+  .pub-feature { grid-column: 1; grid-row: 1; }
+  .pub-related { grid-column: 1; grid-row: 2; }
+  .publication-grid > figure:not(.pub-feature, .pub-related) { grid-row: 1; }
   .poster-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 16px; }
   .poster-grid figure:nth-child(even) { margin-top: 31px; }
   .poster-grid figure:nth-child(3n + 1) { margin-top: 0; }
