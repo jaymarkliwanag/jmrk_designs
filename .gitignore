@@ -1,0 +1,9 @@
+# Original design-source exports stay local; the site uses curated assets/ files.
+/designs/
+
+# Local tooling and operating-system files
+.vercel/
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini

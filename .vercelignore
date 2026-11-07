@@ -1,0 +1,7 @@
+# The deployable, renamed artwork is in assets/.
+designs/
+.git/
+.vercel/
+README.md
+.gitignore
+.vercelignore
